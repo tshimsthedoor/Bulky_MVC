@@ -11,7 +11,7 @@ namespace BulkyRazor_Temp.Pages.Categories
         
         private readonly ApplicationDbContext _db;
 
-        public Category Category { get; set; }
+        public Category? Category { get; set; }
 
         public CreateModel(ApplicationDbContext db)
         {
@@ -24,7 +24,8 @@ namespace BulkyRazor_Temp.Pages.Categories
         public IActionResult OnPost()
         { 
             _db.Categories.Add(Category);
-            _db.SaveChanges(); 
+            _db.SaveChanges();
+            TempData["success"] = "Category created successfully!";
             return RedirectToPage("Index");
 
         }
