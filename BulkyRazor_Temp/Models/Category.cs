@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace BulkyRazor_Temp.Models
+namespace BulkyBookRazor_Temp.Models
 {
     public class Category
     {
